@@ -1,0 +1,10 @@
+﻿<Application x:Class="Bassinator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Bassinator"
+             StartupUri="MainWindow.xaml"
+             Exit="AppExit">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

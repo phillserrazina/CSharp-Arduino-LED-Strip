@@ -1,0 +1,204 @@
+﻿<Window x:Class="Bassinator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bassinator"
+        xmlns:avalon="http://schemas.AvalonControls/AvalonControlsLibrary/Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1000" ResizeMode="CanMinimize">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Margin="5" Grid.Column="0">
+            <Separator></Separator>
+            
+            <StackPanel Margin="5">
+                <Grid HorizontalAlignment="Left">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Volume" FontSize="25" DockPanel.Dock="Left" Grid.Column="0" VerticalAlignment="Center"/>
+                    <Button Content="Color" DockPanel.Dock="Left" Width="80" Margin="15 10 5 10" Grid.Column="1"/>
+                    <Button Content="Brightness" DockPanel.Dock="Left" Width="80" Margin="5 10 5 10" Grid.Column="2"/>
+                    <Button Content="Both" DockPanel.Dock="Left" Width="80" Margin="5 10 5 10" Grid.Column="3"/>
+                    <Slider x:Name="VolumeThresholdSlider" Maximum="255" Value="200" DockPanel.Dock="Left" Width="200" VerticalAlignment="Center" Grid.Column="4"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Smoothness" FontSize="15" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="VolumeSmoothnessSlider" Maximum="50" Value="1" Cursor="Hand" TickPlacement="Both" Margin="5" IsSnapToTickEnabled="True" Grid.Column="1"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Intensity" FontSize="15" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="VolumeIntensitySlider" Maximum="50" Value="1" Cursor="Hand" TickPlacement="Both" Margin="5" Grid.Column="1" IsSnapToTickEnabled="True"/>
+                </Grid>
+
+                <StackPanel Height="10"/>
+
+                <Label x:Name="VolumeLabel" Content="Value: ---" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"/>
+            </StackPanel>
+
+            <StackPanel Height="10"/>
+            <Separator></Separator>
+            <StackPanel Height="10"/>
+
+            <StackPanel Margin="5">
+                <Grid HorizontalAlignment="Left">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Pitch" FontSize="25" Grid.Column="0" VerticalAlignment="Center"/>
+                    <Button Content="Color" Width="80" Margin="15 10 5 10" Grid.Column="1"/>
+                    <Button Content="Brightness" Width="80" Margin="5 10 5 10" Grid.Column="2"/>
+                    <Button Content="Both" Width="80" Margin="5 10 5 10" Grid.Column="3"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Smoothness" FontSize="15" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="PitchSmoothnessSlider" Maximum="50" Value="1" Cursor="Hand" TickPlacement="Both" Margin="5" IsSnapToTickEnabled="True" Grid.Column="1"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Intensity" FontSize="15" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="PitchIntensitySlider" Maximum="50" Value="1" Cursor="Hand" TickPlacement="Both" Margin="5" Grid.Column="1" IsSnapToTickEnabled="True"/>
+                </Grid>
+
+                <Separator Margin="15" />
+
+                <Grid Background="IndianRed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Bass Range" FontSize="14" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="BassRangeSlider" Maximum="50" Value="30" Cursor="Hand" TickPlacement="Both" Margin="5" Grid.Column="1" IsSnapToTickEnabled="True"/>
+                </Grid>
+
+                <Grid Background="IndianRed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Bass Intensity" FontSize="14" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="BassIntensitySlider" Maximum="50" Value="1" Cursor="Hand" TickPlacement="Both" Margin="5" Grid.Column="1" IsSnapToTickEnabled="True"/>
+                </Grid>
+
+                <Separator Margin="15" />
+
+                <Grid Background="ForestGreen">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Mid Range" FontSize="14" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="MidRangeSlider" Maximum="50" Value="30" Cursor="Hand" TickPlacement="Both" Margin="5" Grid.Column="1" IsSnapToTickEnabled="True"/>
+                </Grid>
+
+                <Grid Background="ForestGreen">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Mid Intensity" FontSize="14" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="MidIntensitySlider" Maximum="50" Value="1" Cursor="Hand" TickPlacement="Both" Margin="5" Grid.Column="1" IsSnapToTickEnabled="True"/>
+                </Grid>
+
+                <Separator Margin="15" />
+
+                <Grid Background="LightBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="High Range" FontSize="14" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="HighRangeSlider" Maximum="50" Value="30" Cursor="Hand" TickPlacement="Both" Margin="5" Grid.Column="1" IsSnapToTickEnabled="True"/>
+                </Grid>
+
+                <Grid Background="LightBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="High Intensity" FontSize="14" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+                    <Slider x:Name="HighIntensitySlider" Maximum="50" Value="1" Cursor="Hand" TickPlacement="Both" Margin="5" Grid.Column="1" IsSnapToTickEnabled="True"/>
+                </Grid>
+
+                <Label x:Name="PitchLabel" Content="Value: ---" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"/>
+            </StackPanel>
+
+            <Separator></Separator>
+
+            <StackPanel Margin="5">
+                <Grid HorizontalAlignment="Left">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Mode" FontSize="20" Grid.Column="0" VerticalAlignment="Center"/>
+                    <Button x:Name="FullColorButton" Content="Full Color" Width="80" Margin="15 10 5 10" Grid.Column="1" Click="FullColorButton_Click"/>
+                    <Button x:Name="WormButton" Content="Worm" Width="80" Margin="5 10 5 10" Grid.Column="2" Click="WormButton_Click"/>
+                    <Button x:Name="WaveformButton" Content="Waveform" Width="80" Margin="5 10 5 10" Grid.Column="3" Click="WaveformButton_Click"/>
+                </Grid>
+            </StackPanel>
+
+            <Label x:Name="DebugLabel" Content="Debug: (x, y)"/>
+
+        </StackPanel>
+
+        <Border Grid.Column="1" Margin="5" BorderBrush="LightGray" BorderThickness="1">
+            <StackPanel x:Name="DevicePanel" Margin="10">
+                <Label Content="Available Devices" FontSize="15"/>
+                <Separator/>
+                <StackPanel Height="5"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
